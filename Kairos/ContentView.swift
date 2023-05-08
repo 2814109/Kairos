@@ -13,7 +13,23 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            VStack {
+                Text("Hello, world!")
+            }
+            VStack {
+                Text("Hello, world!")
+            }
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Text("California")
+                    .font(.caption2)
+                
+            }
+            Button("ボタン") {
+                print("ボタンが押されたよ")
+            }
+            .padding()
         }
         .padding()
     }
