@@ -8,30 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            VStack {
-                Text("Hello, world!")
+        let vegetables = ["大根","キャベツ","じゃがいも"]
+        var body: some View {
+            List{
+                Section(header:Text("野菜")) {
+                    ForEach(0 ..< 3) { index in
+                        Text(vegetables[index])
+                    }
+                }
+                .listStyle(DefaultListStyle())
             }
-            VStack {
-                Text("Hello, world!")
-            }
-            HStack {
-                Text("Joshua Tree National Park")
-                    .font(.subheadline)
-                Text("California")
-                    .font(.caption2)
-                
-            }
-            Button("ボタン") {
-                print("ボタンが押されたよ")
-            }
-            .padding()
-        }
-        .padding()
     }
 }
 
