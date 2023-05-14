@@ -99,10 +99,10 @@
 		6C6F82372A09244700DCF0A5 /* Kairos */ = {
 			isa = PBXGroup;
 			children = (
+				6CA557302A10787700081927 /* Components */,
+				6CA5572F2A10785900081927 /* Resouces */,
 				6C6F82382A09244700DCF0A5 /* KairosApp.swift */,
 				6C6F823A2A09244700DCF0A5 /* ContentView.swift */,
-				6CA557292A0FDEE000081927 /* CheckItem.swift */,
-				6CA5572D2A0FDFE500081927 /* CheckItemView.swift */,
 				6C6F823C2A09244800DCF0A5 /* Assets.xcassets */,
 				6C6F823E2A09244800DCF0A5 /* Kairos.entitlements */,
 				6C6F823F2A09244800DCF0A5 /* Preview Content */,
@@ -133,6 +133,22 @@
 				6C6F82562A09244800DCF0A5 /* KairosUITestsLaunchTests.swift */,
 			);
 			path = KairosUITests;
+			sourceTree = "<group>";
+		};
+		6CA5572F2A10785900081927 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				6CA557292A0FDEE000081927 /* CheckItem.swift */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		6CA557302A10787700081927 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6CA5572D2A0FDFE500081927 /* CheckItemView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
