@@ -8,16 +8,35 @@
 import SwiftUI
 
 struct CheckItemView: View {
-    @State var checkItem = CheckItem(isChecked: false, taskName: "test")
+    @Binding var checkItem : CheckItem
+    
+ 
     var body: some View {
-        HStack{
-            Image(systemName: checkItem.isChecked ? "checkmark.circle.fill": "checkmark.circle").resizable().frame(width: 50,height: 50)
+        HStack(spacing:16){
+            Button(action:{checkItem.isChecked.toggle()}, label: {
+                Image(systemName: checkItem.isChecked ?  "checkmark.circle.fill":"circlebadge").resizable().frame(width: 36,height: 36).foregroundColor(checkItem.isChecked ? Color.yellow : Color.white)
+            })
+            Text(checkItem.taskName)
+            Spacer()
+
+        }.padding().preferredColorScheme(.dark)
+    }
+}
+
+
+struct PreviewWrapper: View{
+    @State var checkItem = CheckItem(isChecked: false, taskName: "test")
+    var body: some View{
+        VStack{
+            CheckItemView(checkItem: $checkItem)
         }
     }
 }
 
 struct CheckItemView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckItemView()
+        CheckItemView(checkItem: .constant(CheckItem(isChecked: false, taskName: "test")))
+        CheckItemView(checkItem: .constant(CheckItem(isChecked: true, taskName: "test")))
+        PreviewWrapper()
     }
 }
