@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // DB から値を取ってくる
     @State var checkItems = [
     CheckItem(isChecked: false, taskName: "test"),
     CheckItem(isChecked: false, taskName: "test"),]
     
+    @State var isPresentedCategories = false
         var body: some View {
             NavigationStack{
                 VStack{
@@ -19,8 +21,25 @@ struct ContentView: View {
                         CheckItemView(checkItem: $checkItems[index])
                     }
                     Spacer()
-                }.toolbar{ToolbarItem(placement: .automatic){
-                    Image(systemName: "ellipsis.circle").foregroundColor(Color.yellow)}}
+                }
+                .navigationTitle("Check Items")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button(action: {
+                            isPresentedCategories = true
+                        },label: {
+                            Image(systemName: "note.text.badge.plus").foregroundColor(Color.yellow)
+
+                        })
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button(action: {
+                        }) {
+                            Image(systemName: "ellipsis.circle").foregroundColor(Color.yellow)
+                        }
+                    }
+                }
                 VStack {
                     Spacer()
                     HStack {
@@ -35,12 +54,17 @@ struct ContentView: View {
                         .frame(width: 60, height: 60)
                         .background(Color.orange)
                         .cornerRadius(30.0)
-                        .shadow(color: .gray, radius: 3, x: 3, y: 3)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16.0, trailing: 16.0))
-                        
                     }
                 }
-                
+            }.fullScreenCover(isPresented: $isPresentedCategories, onDismiss: {}){
+                Text("category")
+                Button(action: {
+                    isPresentedCategories = false
+                },label: {
+                    Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
+                    
+                })
             }
         }
 }

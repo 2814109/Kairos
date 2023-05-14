@@ -16,6 +16,7 @@
 		6C6F82572A09244800DCF0A5 /* KairosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F82562A09244800DCF0A5 /* KairosUITestsLaunchTests.swift */; };
 		6CA5572A2A0FDEE000081927 /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557292A0FDEE000081927 /* CheckItem.swift */; };
 		6CA5572E2A0FDFE500081927 /* CheckItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5572D2A0FDFE500081927 /* CheckItemView.swift */; };
+		6CA557332A11368B00081927 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557322A11368B00081927 /* Toolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6C6F82562A09244800DCF0A5 /* KairosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6CA557292A0FDEE000081927 /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
 		6CA5572D2A0FDFE500081927 /* CheckItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemView.swift; sourceTree = "<group>"; };
+		6CA557322A11368B00081927 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				6C6F823C2A09244800DCF0A5 /* Assets.xcassets */,
 				6C6F823E2A09244800DCF0A5 /* Kairos.entitlements */,
 				6C6F823F2A09244800DCF0A5 /* Preview Content */,
+				6CA557322A11368B00081927 /* Toolbar.swift */,
 			);
 			path = Kairos;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				6C6F823B2A09244700DCF0A5 /* ContentView.swift in Sources */,
 				6CA5572A2A0FDEE000081927 /* CheckItem.swift in Sources */,
+				6CA557332A11368B00081927 /* Toolbar.swift in Sources */,
 				6CA5572E2A0FDFE500081927 /* CheckItemView.swift in Sources */,
 				6C6F82392A09244700DCF0A5 /* KairosApp.swift in Sources */,
 			);
