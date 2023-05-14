@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-        let vegetables = ["大根","キャベツ","じゃがいも"]
+    @State var checkItems = [
+    CheckItem(isChecked: false, taskName: "test"),
+    CheckItem(isChecked: false, taskName: "test"),]
         var body: some View {
-            List{
-                Section(header:Text("野菜")) {
-                    ForEach(0 ..< 3) { index in
-                        Text(vegetables[index])
-                    }
+            VStack{
+                
+                ForEach(checkItems.indices, id: \.self) { index in
+                    CheckItemView(checkItem: $checkItems[index])
                 }
-                .listStyle(DefaultListStyle())
             }
-    }
+            .listStyle(DefaultListStyle())
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
