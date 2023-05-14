@@ -14,7 +14,7 @@ struct CheckItemView: View {
     var body: some View {
         HStack(spacing:16){
             Button(action:{checkItem.isChecked.toggle()}, label: {
-                Image(systemName: checkItem.isChecked ?  "checkmark.circle.fill":"circlebadge").resizable().frame(width: 36,height: 36).foregroundColor(checkItem.isChecked ? Color.yellow : Color.white)
+                Image(systemName: checkItem.isChecked ?  "checkmark.circle.fill":"circlebadge").resizable().frame(width: 36,height: 36).foregroundColor(checkItem.isChecked ? Color.yellow : Color.yellow)
             })
             Text(checkItem.taskName)
             Spacer()

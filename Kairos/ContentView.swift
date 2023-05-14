@@ -20,13 +20,13 @@ struct ContentView: View {
                     }
                     Spacer()
                 }.toolbar{ToolbarItem(placement: .automatic){
-                    Button("add", action: {})}}
+                    Image(systemName: "ellipsis.circle").foregroundColor(Color.yellow)}}
                 VStack {
                     Spacer()
                     HStack {
                         Spacer()
                         Button(action: {
-                            print("Tapped!!")
+                            // taskを追加する処理を組み込む
                         }, label: {
                             Image(systemName: "plus")
                                 .foregroundColor(.white)
