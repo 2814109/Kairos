@@ -24,7 +24,7 @@ struct CheckItemView: View {
 }
 
 
-struct PreviewWrapper: View{
+private struct PreviewWrapper: View{
     @State var checkItem = CheckItem(isChecked: false, taskName: "test")
     var body: some View{
         VStack{

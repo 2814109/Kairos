@@ -11,6 +11,7 @@ struct ContentView: View {
     // DB から値を取ってくる
     @State var checkItems = [
     CheckItem(isChecked: false, taskName: "test"),
+    CheckItem(isChecked: false, taskName: "test"),
     CheckItem(isChecked: false, taskName: "test"),]
     
     @State var isPresentedCategories = false
@@ -58,13 +59,7 @@ struct ContentView: View {
                     }
                 }
             }.fullScreenCover(isPresented: $isPresentedCategories, onDismiss: {}){
-                Text("category")
-                Button(action: {
-                    isPresentedCategories = false
-                },label: {
-                    Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
-                    
-                })
+                ManagementCategoryView(isPresentedCategories: $isPresentedCategories)
             }
         }
 }
