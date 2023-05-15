@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct CreateView: View {
+    enum Result {
+        case save(String)
+        case cancel
+    }
+    
     @Binding var isPresentedCheckItem : Bool
 
     @State var checkItemName = ""
@@ -15,14 +20,28 @@ struct CreateView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
+               
+                VStack(alignment: .leading){
+                    Text("check item name")
+                    TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
+                }.padding()
+               
+                VStack(alignment: .leading){
+                    Text("category name")
+                    TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
+                }.padding()
                 Spacer()
-                Button(action: {
-                    isPresentedCheckItem = false
-                },label: {
-                    Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
-                })
-            }.padding().navigationTitle("Create check Item").preferredColorScheme(.dark)
+            }.navigationTitle("Create check Item")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button(action: {
+                            isPresentedCheckItem = false
+                        },label: {
+                            Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
+                        })
+                    }
+                }.padding().preferredColorScheme(.dark)
         }
     }
 }

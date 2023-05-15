@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+  
     // DB から値を取ってくる
     @State var checkItems = [
     CheckItem(isChecked: false, taskName: "test"),
