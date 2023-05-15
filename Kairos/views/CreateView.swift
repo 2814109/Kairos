@@ -39,7 +39,7 @@ struct CreateView: View {
                         isPresentedCheckItem = false
                         
                     }, label: {Image(systemName: "dock.arrow.down.rectangle").resizable()
-                        .frame(width: 60, height: 54).foregroundColor(Color.yellow)}).disabled(checkItemName.isEmpty).padding()
+                        .frame(width: 60, height: 54).foregroundColor(checkItemName.isEmpty ? Color.gray : Color.yellow)}).disabled(checkItemName.isEmpty).padding()
                 }.padding()
                 
             }.navigationTitle("Create check Item")
