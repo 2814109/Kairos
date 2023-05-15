@@ -107,6 +107,7 @@
 		6C6F82372A09244700DCF0A5 /* Kairos */ = {
 			isa = PBXGroup;
 			children = (
+				6CA5573A2A124D4600081927 /* views */,
 				6CA557302A10787700081927 /* Components */,
 				6CA5572F2A10785900081927 /* Resouces */,
 				6C6F82382A09244700DCF0A5 /* KairosApp.swift */,
@@ -156,11 +157,18 @@
 			isa = PBXGroup;
 			children = (
 				6CA5572D2A0FDFE500081927 /* CheckItemView.swift */,
-				6CA557342A12288800081927 /* CreateView.swift */,
-				6CA557362A122A8D00081927 /* ManagementCategoryView.swift */,
 				6CA557382A122EB900081927 /* FABView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		6CA5573A2A124D4600081927 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6CA557342A12288800081927 /* CreateView.swift */,
+				6CA557362A122A8D00081927 /* ManagementCategoryView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

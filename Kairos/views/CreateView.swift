@@ -14,13 +14,13 @@ struct CreateView: View {
     }
     
     @Binding var isPresentedCheckItem : Bool
+    @Binding var result : Result
 
     @State var checkItemName = ""
     
     var body: some View {
         NavigationStack{
             VStack{
-               
                 VStack(alignment: .leading){
                     Text("check item name")
                     TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
@@ -29,13 +29,25 @@ struct CreateView: View {
                 VStack(alignment: .leading){
                     Text("category name")
                     TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
+                    
+                    Spacer()
                 }.padding()
                 Spacer()
+                VStack{
+                    Button(action: {
+                        result = .save(checkItemName)
+                        isPresentedCheckItem = false
+                        
+                    }, label: {Image(systemName: "dock.arrow.down.rectangle").resizable()
+                        .frame(width: 60, height: 54).foregroundColor(Color.yellow)}).disabled(checkItemName.isEmpty).padding()
+                }.padding()
+                
             }.navigationTitle("Create check Item")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading){
                         Button(action: {
+                            result = .cancel
                             isPresentedCheckItem = false
                         },label: {
                             Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
@@ -48,9 +60,10 @@ struct CreateView: View {
 
 private struct PreviewWrappter :View{
     @State var isPresentedCheckItem = false
+    @State var result = CreateView.Result.cancel
     
     var body: some View {
-        CreateView(isPresentedCheckItem: $isPresentedCheckItem)
+        CreateView(isPresentedCheckItem: $isPresentedCheckItem, result: $result)
     }
 }
 

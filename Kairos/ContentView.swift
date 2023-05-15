@@ -19,6 +19,8 @@ struct ContentView: View {
     @State var isPresentedCategories = false
     @State var isPresentedCheckItem = false
 
+    @State var createViewResult = CreateView.Result.cancel
+    
         var body: some View {
             NavigationStack{
                 VStack{
@@ -49,8 +51,16 @@ struct ContentView: View {
             }.fullScreenCover(isPresented: $isPresentedCategories, onDismiss: {}){
                 ManagementCategoryView(isPresentedCategories: $isPresentedCategories)
             }
-            .fullScreenCover(isPresented: $isPresentedCheckItem, onDismiss: {}){
-                CreateView(isPresentedCheckItem: $isPresentedCheckItem)
+            .fullScreenCover(isPresented: $isPresentedCheckItem, onDismiss: {
+                switch createViewResult {
+                    case .save(let checkItemName):
+                        checkItems.append(CheckItem(isChecked: false, taskName: checkItemName))
+                    case .cancel:
+                        break
+                }
+            }){
+                CreateView(isPresentedCheckItem: $isPresentedCheckItem,
+                result: $createViewResult)
             }
         }
 }
