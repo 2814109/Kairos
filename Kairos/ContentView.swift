@@ -15,6 +15,8 @@ struct ContentView: View {
     CheckItem(isChecked: false, taskName: "test"),]
     
     @State var isPresentedCategories = false
+    @State var isPresentedCheckItem = false
+
         var body: some View {
             NavigationStack{
                 VStack{
@@ -41,9 +43,12 @@ struct ContentView: View {
                         }
                     }
                 }
-                FABView()
+                FABView(isPresentedCheckItem: $isPresentedCheckItem)
             }.fullScreenCover(isPresented: $isPresentedCategories, onDismiss: {}){
                 ManagementCategoryView(isPresentedCategories: $isPresentedCategories)
+            }
+            .fullScreenCover(isPresented: $isPresentedCheckItem, onDismiss: {}){
+                CreateView(isPresentedCheckItem: $isPresentedCheckItem)
             }
         }
 }

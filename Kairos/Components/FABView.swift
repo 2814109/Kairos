@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FABView: View {
+    @Binding var isPresentedCheckItem : Bool
     var body: some View {
         VStack {
             Spacer()
@@ -15,7 +16,7 @@ struct FABView: View {
                 Spacer()
                 Button(action: {
                     // taskを追加する処理を組み込む
-                }, label: {
+                    isPresentedCheckItem = true                }, label: {
                     Image(systemName: "plus")
                         .foregroundColor(.white)
                         .font(.system(size: 24))
@@ -29,8 +30,15 @@ struct FABView: View {
     }
 }
 
+private struct PreviewWrappter :View{
+    @State var isPresentedCheckItem = false
+    
+    var body: some View {
+        FABView(isPresentedCheckItem: $isPresentedCheckItem)
+    }
+}
 struct FABView_Previews: PreviewProvider {
     static var previews: some View {
-        FABView()
+        PreviewWrappter()
     }
 }
