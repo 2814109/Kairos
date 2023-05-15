@@ -18,8 +18,17 @@ struct ContentView: View {
     
     @State var isPresentedCategories = false
     @State var isPresentedCheckItem = false
-
     @State var createViewResult = CreateView.Result.cancel
+    
+    
+    func didDismiss() -> Void{
+        switch createViewResult {
+            case .save(let checkItemName):
+                checkItems.append(CheckItem(isChecked: false, taskName: checkItemName))
+            case .cancel:
+                break
+        }
+    }
     
         var body: some View {
             NavigationStack{
@@ -52,12 +61,7 @@ struct ContentView: View {
                 ManagementCategoryView(isPresentedCategories: $isPresentedCategories)
             }
             .fullScreenCover(isPresented: $isPresentedCheckItem, onDismiss: {
-                switch createViewResult {
-                    case .save(let checkItemName):
-                        checkItems.append(CheckItem(isChecked: false, taskName: checkItemName))
-                    case .cancel:
-                        break
-                }
+                didDismiss()
             }){
                 CreateView(isPresentedCheckItem: $isPresentedCheckItem,
                 result: $createViewResult)

@@ -19,42 +19,42 @@ struct CreateView: View {
     @State var checkItemName = ""
     
     var body: some View {
-        NavigationStack{
-            VStack{
-                VStack(alignment: .leading){
-                    Text("check item name")
-                    TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
-                }.padding()
-               
-                VStack(alignment: .leading){
-                    Text("category name")
-                    TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
-                    
-                    Spacer()
-                }.padding()
-                Spacer()
+        VStack {
+            NavigationStack{
                 VStack{
-                    Button(action: {
-                        result = .save(checkItemName)
-                        isPresentedCheckItem = false
+                    VStack(alignment: .leading){
+                        Text("check item name")
+                        TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
+                    }.padding()
+                   
+                    VStack(alignment: .leading){
+                        Text("category name")
+                        TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
                         
-                    }, label: {Image(systemName: "dock.arrow.down.rectangle").resizable()
-                        .frame(width: 60, height: 54).foregroundColor(checkItemName.isEmpty ? Color.gray : Color.yellow)}).disabled(checkItemName.isEmpty).padding()
-                }.padding()
+                        Spacer()
+                    }.padding()
+                    Spacer()
+                 
+                    
+                }.navigationTitle("Create check Item")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading){
+                            Button(action: {
+                                result = .cancel
+                                isPresentedCheckItem = false
+                            },label: {
+                                Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
+                            })
+                        }
+                    }.padding().preferredColorScheme(.dark)
+            }
+            Button(action: {
+                result = .save(checkItemName)
+                isPresentedCheckItem = false
                 
-            }.navigationTitle("Create check Item")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading){
-                        Button(action: {
-                            result = .cancel
-                            isPresentedCheckItem = false
-                        },label: {
-                            Image(systemName: "arrow.uturn.left.circle").foregroundColor(Color.yellow)
-                        })
-                    }
-                }.padding().preferredColorScheme(.dark)
-        }
+            }, label: {Image(systemName: "dock.arrow.down.rectangle").resizable()
+                .frame(width: 60, height: 54).foregroundColor(checkItemName.isEmpty ? Color.gray : Color.yellow)}).disabled(checkItemName.isEmpty).padding()        }
     }
 }
 
