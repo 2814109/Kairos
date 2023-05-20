@@ -17,7 +17,8 @@ struct CreateView: View {
     @Binding var result : Result
 
     @State var checkItemName = ""
-    
+    @State private var selectedValue = "りんご"
+
     var body: some View {
         VStack {
             NavigationStack{
@@ -26,10 +27,20 @@ struct CreateView: View {
                         Text("check item name")
                         TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
                     }.padding()
+                    
                    
                     VStack(alignment: .leading){
                         Text("category name")
-                        TextField("", text: $checkItemName).textFieldStyle(.roundedBorder)
+                        Picker("", selection: $selectedValue) {
+                            Text("りんご").tag(0)
+                            Text("みかん").tag(1)
+                            Text("レモン").tag(2)
+                            Text("ゴリラ").tag(1)
+                            Text("ラッパ").tag(2)
+                            Text("パクチー").tag(1)
+                            Text("チーズ").tag(2)
+                        }
+                        .pickerStyle(.wheel)
                         
                         Spacer()
                     }.padding()
