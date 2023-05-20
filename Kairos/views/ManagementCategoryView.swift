@@ -13,7 +13,31 @@ struct ManagementCategoryView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("category")
+                List {
+                    Text("Category1")
+                    Text("Category2")
+                    Text("Category3")
+                    Text("Category4")
+                }
+//                FABView(isPresentedCheckItem: $isPresentedCheckItem)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            // categoryを追加する処理を組み込む
+                            
+                        }, label: {
+                                Image(systemName: "plus")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 24))
+                            })
+                        .frame(width: 60, height: 60)
+                        .background(Color.orange)
+                        .cornerRadius(30.0)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16.0, trailing: 16.0))
+                    }
+                }
             }.navigationTitle("Management Category")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

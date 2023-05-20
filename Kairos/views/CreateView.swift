@@ -45,8 +45,6 @@ struct CreateView: View {
                         Spacer()
                     }.padding()
                     Spacer()
-                 
-                    
                 }.navigationTitle("Create check Item")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {

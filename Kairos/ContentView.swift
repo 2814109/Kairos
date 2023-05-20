@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-  
     // DB から値を取ってくる
     @State var checkItems = [
     CheckItem(isChecked: false, taskName: "test"),
-    CheckItem(isChecked: false, taskName: "test"),
+    CheckItem(isChecked: true, taskName: "test"),
     CheckItem(isChecked: false, taskName: "test"),]
     
     @State var isPresentedCategories = false
     @State var isPresentedCheckItem = false
     @State var createViewResult = CreateView.Result.cancel
-    
-    
+
+    @State var isDisplayed = false
     func didDismiss() -> Void{
         switch createViewResult {
             case .save(let checkItemName):
@@ -34,7 +32,11 @@ struct ContentView: View {
             NavigationStack{
                 VStack{
                     ForEach(checkItems.indices, id: \.self) { index in
-                        CheckItemView(checkItem: $checkItems[index])
+                        if($checkItems[index].isChecked.wrappedValue == isDisplayed){
+                            CheckItemView(checkItem: $checkItems[index])
+                        }
+                            
+                        
                     }
                     Spacer()
                 }
@@ -45,13 +47,19 @@ struct ContentView: View {
                         Button(action: {
                             isPresentedCategories = true
                         },label: {
-                            Image(systemName: "note.text.badge.plus").foregroundColor(Color.yellow)
+                            Image(systemName: "plus.square.on.square").foregroundColor(Color.yellow)
 
                         })
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
-                        Button(action: {
-                        }) {
+                        Menu() {
+                            Button(!isDisplayed ? "実行済みを表示" : "未実行を表示",action:{
+                                isDisplayed = !isDisplayed
+                            })
+                            Button("カテゴリーを編集",action:{
+                                isPresentedCategories = true
+                            })
+                        }label: {
                             Image(systemName: "ellipsis.circle").foregroundColor(Color.yellow)
                         }
                     }
