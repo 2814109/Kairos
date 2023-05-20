@@ -30,16 +30,19 @@ struct ContentView: View {
     
         var body: some View {
             NavigationStack{
-                ScrollView {
-                    VStack{
-                        ForEach(checkItems.indices, id: \.self) { index in
-                            if($checkItems[index].isChecked.wrappedValue == isDisplayed){
-                                CheckItemView(checkItem: $checkItems[index])
+                ZStack {
+                    ScrollView {
+                        VStack{
+                            ForEach(checkItems.indices, id: \.self) { index in
+                                if($checkItems[index].isChecked.wrappedValue == isDisplayed){
+                                    CheckItemView(checkItem: $checkItems[index])
+                                }
+                                
+                                
                             }
-                            
-                            
                         }
                     }
+                    FABView(isPresentedCheckItem: $isPresentedCheckItem)
                 }
                 .navigationTitle("Check Items")
                 .navigationBarTitleDisplayMode(.inline)
@@ -65,7 +68,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                FABView(isPresentedCheckItem: $isPresentedCheckItem)
+                
             }.fullScreenCover(isPresented: $isPresentedCategories, onDismiss: {}){
                 ManagementCategoryView(isPresentedCategories: $isPresentedCategories)
             }
