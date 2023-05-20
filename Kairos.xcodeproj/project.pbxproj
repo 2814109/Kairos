@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3BEF9B955447F0606D716F /* Pods_Kairos_KairosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780803EAF3C5E0EA64C26135 /* Pods_Kairos_KairosUITests.framework */; };
 		6C6F82392A09244700DCF0A5 /* KairosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F82382A09244700DCF0A5 /* KairosApp.swift */; };
 		6C6F823B2A09244700DCF0A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F823A2A09244700DCF0A5 /* ContentView.swift */; };
 		6C6F823D2A09244800DCF0A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F823C2A09244800DCF0A5 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		6CA557352A12288800081927 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557342A12288800081927 /* CreateView.swift */; };
 		6CA557372A122A8D00081927 /* ManagementCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557362A122A8D00081927 /* ManagementCategoryView.swift */; };
 		6CA557392A122EB900081927 /* FABView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557382A122EB900081927 /* FABView.swift */; };
+		8A1F2D50CC4EAA9AD1622BAD /* Pods_KairosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157C939177260A7E59F5ACF /* Pods_KairosTests.framework */; };
+		C3596D2BDF85AF7799338FF2 /* Pods_Kairos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DF0A7538E6124D7CABD7A7 /* Pods_Kairos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21DF0A7538E6124D7CABD7A7 /* Pods_Kairos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kairos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B334A61DC3C2CB8437F24F /* Pods-Kairos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kairos.debug.xcconfig"; path = "Target Support Files/Pods-Kairos/Pods-Kairos.debug.xcconfig"; sourceTree = "<group>"; };
+		489FC6070EB546ADF0568A67 /* Pods-KairosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KairosTests.release.xcconfig"; path = "Target Support Files/Pods-KairosTests/Pods-KairosTests.release.xcconfig"; sourceTree = "<group>"; };
+		657F3FB2DA3E85A761731C58 /* Pods-KairosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KairosTests.debug.xcconfig"; path = "Target Support Files/Pods-KairosTests/Pods-KairosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C6F82352A09244700DCF0A5 /* Kairos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kairos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6F82382A09244700DCF0A5 /* KairosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosApp.swift; sourceTree = "<group>"; };
 		6C6F823A2A09244700DCF0A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +64,11 @@
 		6CA557342A12288800081927 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		6CA557362A122A8D00081927 /* ManagementCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementCategoryView.swift; sourceTree = "<group>"; };
 		6CA557382A122EB900081927 /* FABView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABView.swift; sourceTree = "<group>"; };
+		780803EAF3C5E0EA64C26135 /* Pods_Kairos_KairosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kairos_KairosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A201D7797EFB7C0609ED1E98 /* Pods-Kairos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kairos.release.xcconfig"; path = "Target Support Files/Pods-Kairos/Pods-Kairos.release.xcconfig"; sourceTree = "<group>"; };
+		ADAD600264705E87AA011540 /* Pods-Kairos-KairosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kairos-KairosUITests.release.xcconfig"; path = "Target Support Files/Pods-Kairos-KairosUITests/Pods-Kairos-KairosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B157C939177260A7E59F5ACF /* Pods_KairosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KairosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEE110F5406481802D7EFD5 /* Pods-Kairos-KairosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kairos-KairosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kairos-KairosUITests/Pods-Kairos-KairosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3596D2BDF85AF7799338FF2 /* Pods_Kairos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1F2D50CC4EAA9AD1622BAD /* Pods_KairosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3BEF9B955447F0606D716F /* Pods_Kairos_KairosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +106,8 @@
 				6C6F82492A09244800DCF0A5 /* KairosTests */,
 				6C6F82532A09244800DCF0A5 /* KairosUITests */,
 				6C6F82362A09244700DCF0A5 /* Products */,
+				FB4D8F2C2F68110566A6FCFD /* Pods */,
+				A678E8C29A20DC912A0F02BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +188,29 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		A678E8C29A20DC912A0F02BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21DF0A7538E6124D7CABD7A7 /* Pods_Kairos.framework */,
+				780803EAF3C5E0EA64C26135 /* Pods_Kairos_KairosUITests.framework */,
+				B157C939177260A7E59F5ACF /* Pods_KairosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB4D8F2C2F68110566A6FCFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25B334A61DC3C2CB8437F24F /* Pods-Kairos.debug.xcconfig */,
+				A201D7797EFB7C0609ED1E98 /* Pods-Kairos.release.xcconfig */,
+				FAEE110F5406481802D7EFD5 /* Pods-Kairos-KairosUITests.debug.xcconfig */,
+				ADAD600264705E87AA011540 /* Pods-Kairos-KairosUITests.release.xcconfig */,
+				657F3FB2DA3E85A761731C58 /* Pods-KairosTests.debug.xcconfig */,
+				489FC6070EB546ADF0568A67 /* Pods-KairosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C6F825A2A09244800DCF0A5 /* Build configuration list for PBXNativeTarget "Kairos" */;
 			buildPhases = (
+				431C7F537A8609DED5454A2E /* [CP] Check Pods Manifest.lock */,
 				6C6F82312A09244700DCF0A5 /* Sources */,
 				6C6F82322A09244700DCF0A5 /* Frameworks */,
 				6C6F82332A09244700DCF0A5 /* Resources */,
+				AD933786877B0DFB1A26A659 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C6F825D2A09244800DCF0A5 /* Build configuration list for PBXNativeTarget "KairosTests" */;
 			buildPhases = (
+				886BB63C91FC3D1D35A7A377 /* [CP] Check Pods Manifest.lock */,
 				6C6F82422A09244800DCF0A5 /* Sources */,
 				6C6F82432A09244800DCF0A5 /* Frameworks */,
 				6C6F82442A09244800DCF0A5 /* Resources */,
@@ -213,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C6F82602A09244800DCF0A5 /* Build configuration list for PBXNativeTarget "KairosUITests" */;
 			buildPhases = (
+				8D7720C69D4EED2084DB7716 /* [CP] Check Pods Manifest.lock */,
 				6C6F824C2A09244800DCF0A5 /* Sources */,
 				6C6F824D2A09244800DCF0A5 /* Frameworks */,
 				6C6F824E2A09244800DCF0A5 /* Resources */,
+				9FC424B1F64D6D8E341C0D74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +340,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		431C7F537A8609DED5454A2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kairos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		886BB63C91FC3D1D35A7A377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KairosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7720C69D4EED2084DB7716 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kairos-KairosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC424B1F64D6D8E341C0D74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kairos-KairosUITests/Pods-Kairos-KairosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kairos-KairosUITests/Pods-Kairos-KairosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kairos-KairosUITests/Pods-Kairos-KairosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD933786877B0DFB1A26A659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kairos/Pods-Kairos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kairos/Pods-Kairos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kairos/Pods-Kairos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C6F82312A09244700DCF0A5 /* Sources */ = {
@@ -456,7 +604,9 @@
 		};
 		6C6F825B2A09244800DCF0A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B334A61DC3C2CB8437F24F /* Pods-Kairos.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kairos/Kairos.entitlements;
@@ -476,7 +626,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"$(inherited)",
+				);
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
 				MARKETING_VERSION = 1.0;
@@ -492,7 +645,9 @@
 		};
 		6C6F825C2A09244800DCF0A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A201D7797EFB7C0609ED1E98 /* Pods-Kairos.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kairos/Kairos.entitlements;
@@ -512,7 +667,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"$(inherited)",
+				);
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
 				MARKETING_VERSION = 1.0;
@@ -528,8 +686,9 @@
 		};
 		6C6F825E2A09244800DCF0A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657F3FB2DA3E85A761731C58 /* Pods-KairosTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -550,8 +709,9 @@
 		};
 		6C6F825F2A09244800DCF0A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489FC6070EB546ADF0568A67 /* Pods-KairosTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -572,8 +732,9 @@
 		};
 		6C6F82612A09244800DCF0A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAEE110F5406481802D7EFD5 /* Pods-Kairos-KairosUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -593,8 +754,9 @@
 		};
 		6C6F82622A09244800DCF0A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADAD600264705E87AA011540 /* Pods-Kairos-KairosUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
