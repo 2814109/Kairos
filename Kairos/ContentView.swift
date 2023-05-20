@@ -10,9 +10,9 @@ import SwiftUI
 struct ContentView: View {
     // DB から値を取ってくる
     @State var checkItems = [
-    CheckItem(isChecked: false, taskName: "test"),
-    CheckItem(isChecked: true, taskName: "test"),
-    CheckItem(isChecked: false, taskName: "test"),]
+    CheckItem(isChecked: false, taskName: "test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1"),
+    CheckItem(isChecked: true, taskName: "test2"),
+    CheckItem(isChecked: true, taskName: "test3"),CheckItem(isChecked: true, taskName: "test4"),CheckItem(isChecked: true, taskName: "test5"),CheckItem(isChecked: true, taskName: "test6"),CheckItem(isChecked: true, taskName: "test7"),CheckItem(isChecked: true, taskName: "test8"),CheckItem(isChecked: true, taskName: "test9"),CheckItem(isChecked: true, taskName: "test10"),CheckItem(isChecked: true, taskName: "test11"),CheckItem(isChecked: true, taskName: "test12"),CheckItem(isChecked: true, taskName: "test13"),CheckItem(isChecked: true, taskName: "test14"),CheckItem(isChecked: true, taskName: "test15") ,]
     
     @State var isPresentedCategories = false
     @State var isPresentedCheckItem = false
@@ -30,15 +30,16 @@ struct ContentView: View {
     
         var body: some View {
             NavigationStack{
-                VStack{
-                    ForEach(checkItems.indices, id: \.self) { index in
-                        if($checkItems[index].isChecked.wrappedValue == isDisplayed){
-                            CheckItemView(checkItem: $checkItems[index])
-                        }
+                ScrollView {
+                    VStack{
+                        ForEach(checkItems.indices, id: \.self) { index in
+                            if($checkItems[index].isChecked.wrappedValue == isDisplayed){
+                                CheckItemView(checkItem: $checkItems[index])
+                            }
                             
-                        
+                            
+                        }
                     }
-                    Spacer()
                 }
                 .navigationTitle("Check Items")
                 .navigationBarTitleDisplayMode(.inline)
