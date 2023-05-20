@@ -37,8 +37,6 @@ struct ContentView: View {
                                 if($checkItems[index].isChecked.wrappedValue == isDisplayed){
                                     CheckItemView(checkItem: $checkItems[index])
                                 }
-                                
-                                
                             }
                         }
                     }
