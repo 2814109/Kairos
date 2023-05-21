@@ -17,10 +17,10 @@
 		6C6F82572A09244800DCF0A5 /* KairosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F82562A09244800DCF0A5 /* KairosUITestsLaunchTests.swift */; };
 		6CA5572A2A0FDEE000081927 /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557292A0FDEE000081927 /* CheckItem.swift */; };
 		6CA5572E2A0FDFE500081927 /* CheckItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5572D2A0FDFE500081927 /* CheckItemView.swift */; };
-		6CA557332A11368B00081927 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557322A11368B00081927 /* Toolbar.swift */; };
 		6CA557352A12288800081927 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557342A12288800081927 /* CreateView.swift */; };
 		6CA557372A122A8D00081927 /* ManagementCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557362A122A8D00081927 /* ManagementCategoryView.swift */; };
 		6CA557392A122EB900081927 /* FABView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA557382A122EB900081927 /* FABView.swift */; };
+		6CB2B37E2A193EE000580FA7 /* CheckItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2B37D2A193EE000580FA7 /* CheckItemModel.swift */; };
 		8A1F2D50CC4EAA9AD1622BAD /* Pods_KairosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157C939177260A7E59F5ACF /* Pods_KairosTests.framework */; };
 		C3596D2BDF85AF7799338FF2 /* Pods_Kairos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DF0A7538E6124D7CABD7A7 /* Pods_Kairos.framework */; };
 /* End PBXBuildFile section */
@@ -60,10 +60,10 @@
 		6C6F82562A09244800DCF0A5 /* KairosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KairosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6CA557292A0FDEE000081927 /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
 		6CA5572D2A0FDFE500081927 /* CheckItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemView.swift; sourceTree = "<group>"; };
-		6CA557322A11368B00081927 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		6CA557342A12288800081927 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		6CA557362A122A8D00081927 /* ManagementCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementCategoryView.swift; sourceTree = "<group>"; };
 		6CA557382A122EB900081927 /* FABView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABView.swift; sourceTree = "<group>"; };
+		6CB2B37D2A193EE000580FA7 /* CheckItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemModel.swift; sourceTree = "<group>"; };
 		780803EAF3C5E0EA64C26135 /* Pods_Kairos_KairosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kairos_KairosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A201D7797EFB7C0609ED1E98 /* Pods-Kairos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kairos.release.xcconfig"; path = "Target Support Files/Pods-Kairos/Pods-Kairos.release.xcconfig"; sourceTree = "<group>"; };
 		ADAD600264705E87AA011540 /* Pods-Kairos-KairosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kairos-KairosUITests.release.xcconfig"; path = "Target Support Files/Pods-Kairos-KairosUITests/Pods-Kairos-KairosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +124,7 @@
 		6C6F82372A09244700DCF0A5 /* Kairos */ = {
 			isa = PBXGroup;
 			children = (
+				6CB2B37C2A193EC800580FA7 /* models */,
 				6CA5573A2A124D4600081927 /* views */,
 				6CA557302A10787700081927 /* Components */,
 				6CA5572F2A10785900081927 /* Resouces */,
@@ -132,7 +133,6 @@
 				6C6F823C2A09244800DCF0A5 /* Assets.xcassets */,
 				6C6F823E2A09244800DCF0A5 /* Kairos.entitlements */,
 				6C6F823F2A09244800DCF0A5 /* Preview Content */,
-				6CA557322A11368B00081927 /* Toolbar.swift */,
 			);
 			path = Kairos;
 			sourceTree = "<group>";
@@ -186,6 +186,14 @@
 				6CA557362A122A8D00081927 /* ManagementCategoryView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		6CB2B37C2A193EC800580FA7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6CB2B37D2A193EE000580FA7 /* CheckItemModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		A678E8C29A20DC912A0F02BF /* Frameworks */ = {
@@ -450,8 +458,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C6F823B2A09244700DCF0A5 /* ContentView.swift in Sources */,
+				6CB2B37E2A193EE000580FA7 /* CheckItemModel.swift in Sources */,
 				6CA5572A2A0FDEE000081927 /* CheckItem.swift in Sources */,
-				6CA557332A11368B00081927 /* Toolbar.swift in Sources */,
 				6CA557372A122A8D00081927 /* ManagementCategoryView.swift in Sources */,
 				6CA557392A122EB900081927 /* FABView.swift in Sources */,
 				6CA5572E2A0FDFE500081927 /* CheckItemView.swift in Sources */,
