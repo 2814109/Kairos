@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct _ContentView: View {
+struct ContentView: View {
     // DB から値を取ってくる
     @State var checkItems = [
     CheckItem(isChecked: false, taskName: "test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1"),
@@ -80,6 +80,6 @@ struct _ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        _ContentView()
+        ContentView()
     }
 }
