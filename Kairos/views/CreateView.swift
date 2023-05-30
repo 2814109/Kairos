@@ -29,21 +29,21 @@ struct CreateView: View {
                     }.padding()
                     
                    
-                    VStack(alignment: .leading){
-                        Text("category name")
-                        Picker("", selection: $selectedValue) {
-                            Text("りんご").tag(0)
-                            Text("みかん").tag(1)
-                            Text("レモン").tag(2)
-                            Text("ゴリラ").tag(1)
-                            Text("ラッパ").tag(2)
-                            Text("パクチー").tag(1)
-                            Text("チーズ").tag(2)
-                        }
-                        .pickerStyle(.wheel)
-                        
-                        Spacer()
-                    }.padding()
+//                    VStack(alignment: .leading){
+//                        Text("category name")
+//                        Picker("", selection: $selectedValue) {
+//                            Text("りんご").tag(0)
+//                            Text("みかん").tag(1)
+//                            Text("レモン").tag(2)
+//                            Text("ゴリラ").tag(1)
+//                            Text("ラッパ").tag(2)
+//                            Text("パクチー").tag(1)
+//                            Text("チーズ").tag(2)
+//                        }
+//                        .pickerStyle(.wheel)
+//                        
+//                        Spacer()
+//                    }.padding()
                     Spacer()
                 }.navigationTitle("Create check Item")
                     .navigationBarTitleDisplayMode(.inline)
