@@ -5,8 +5,8 @@
 //  Created by kyosuke on 2023/05/21.
 //
 
-//import Foundation
-//import RealmSwift
+import Foundation
+import RealmSwift
 //class CheckItemModel: Object {
 //
 //    @objc dynamic var taskName: String = ""
@@ -28,3 +28,4 @@
 //        return "id"
 //    }
 //}
+

@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import RealmSwift
+
 struct ContentView: View {
     // DB から値を取ってくる
+    
+    @ObservedResults(ItemGroup.self) var itemGroups
+    
     @State var checkItems = [
     CheckItem(isChecked: false, taskName: "test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1"),
     CheckItem(isChecked: true, taskName: "test2"),
@@ -19,6 +24,7 @@ struct ContentView: View {
 
     @State var isDisplayed = false
     func didDismiss() -> Void{
+
         switch createViewResult {
             case .save(let checkItemName):
                 checkItems.append(CheckItem(isChecked: false, taskName: checkItemName))
@@ -28,6 +34,7 @@ struct ContentView: View {
     }
 
         var body: some View {
+
             NavigationStack{
                 ZStack {
                     ScrollView {
