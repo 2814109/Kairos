@@ -58,3 +58,10 @@ func createDog() -> Void{
     }
     
 }
+
+func getAllDog() -> Results<Dog>{
+    let realm = try! Realm()
+    // Access all dogs in the realm
+    let dogs = realm.objects(Dog.self)
+    return dogs
+}
